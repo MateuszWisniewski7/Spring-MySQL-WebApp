@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/bank?useSSL=false&useTimezone=true&serverTimezone=Europe/Warsaw
+    username: student
+    password: student
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
