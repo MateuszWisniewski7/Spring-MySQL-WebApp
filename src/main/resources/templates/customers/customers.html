@@ -2,8 +2,30 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>customers</title>
+    <link href="../static/css/style.css"
+          th:href="@{css/style.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
+<h1>Customers list</h1>
+
+<div th:if="${not #lists.isEmpty(customers)}" class="table">
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Branch Id</th>
+            <th>Link</th>
+        </tr>
+        <tr th:each="customer:${customers}">
+            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.name}"></td>
+            <td th:text="${customer.branch}"></td>
+            <td><a th:href="${'customers/' + customer.id}">View</a></td>
+        </tr>
+    </table>
+</div>
+<a href="../">Home</a>
 </body>
 </html>

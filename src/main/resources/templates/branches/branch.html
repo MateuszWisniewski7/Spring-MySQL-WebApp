@@ -2,8 +2,26 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>Branch</title>
+    <link href="../static/css/style.css"
+          th:href="@{../css/style.css}" rel="stylesheet" media="screen"/>
 </head>
 <body>
+<div>
+    <h1>Branch</h1>
+</div>
+<div>
+    <label>Branch id: </label>
+    <div class="one">
+        <p th:text="${branch.id}"></p>
+    </div>
+</div>
+<div>
+    <label>Branch name: </label>
+    <div class="one">
+        <p th:text="${branch.name}"></p>
+    </div>
+</div>
+<p><a href="../branches">Return</a></p>
 </body>
 </html>
