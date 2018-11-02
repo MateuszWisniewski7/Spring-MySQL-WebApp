@@ -1,15 +1,12 @@
-package pl.mw.springmysqldb.models;
+package pl.mw.springmysqldb.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Branches {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "_id")
     private Integer id;
 

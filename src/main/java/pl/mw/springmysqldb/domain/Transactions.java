@@ -1,4 +1,4 @@
-package pl.mw.springmysqldb.models;
+package pl.mw.springmysqldb.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
